@@ -1,1 +1,9 @@
-(function() { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://cdn.rawgit.com/guprooon/Javascript/master/null.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })();
+var cb = function() {
+var l = document.createElement('link'); l.rel = 'stylesheet';
+l.href = 'http://cdn.materialdesignicons.com/1.3.41/css/materialdesignicons.min.css';
+var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+};
+var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+webkitRequestAnimationFrame || msRequestAnimationFrame;
+if (raf) raf(cb);
+else window.addEventListener('load', cb);
