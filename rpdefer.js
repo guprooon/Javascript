@@ -1,9 +1,9 @@
-var cb = function() {
-var l = document.createElement('link'); l.rel = 'stylesheet';
-l.href = 'https://cdn.rawgit.com/guprooon/Javascript/master/rp.js';
-var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+var ca = function() {
+var i = document.createElement('script');
+i.href = 'https://cdn.rawgit.com/guprooon/Javascript/master/rp.js';
+var j = document.getElementsByTagName('article')[0]; j.parentNode.insertBefore(i, j);
 };
-var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+var rbf = requestAnimationFrame || mozRequestAnimationFrame ||
 webkitRequestAnimationFrame || msRequestAnimationFrame;
-if (raf) raf(cb);
-else window.addEventListener('load', cb);
+if (rbf) rbf(ca);
+else window.addEventListener('load', ca);
