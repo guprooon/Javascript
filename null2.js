@@ -1,6 +1,6 @@
 var cb = function() {
 var l = document.createElement('link'); l.rel = 'stylesheet';
-l.href = 'http://cdn.materialdesignicons.com/1.3.41/css/materialdesignicons.min.css';
+l.href = 'http://cdn.materialdesignicons.com/1.4.57/css/materialdesignicons.min.css';
 var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
 };
 var raf = requestAnimationFrame || mozRequestAnimationFrame ||
