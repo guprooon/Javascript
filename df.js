@@ -1,6 +1,6 @@
 var cb = function() {
 var l = document.createElement('link'); l.rel = 'stylesheet';
-l.href = 'https://github.com/guprooon/Javascript/blob/master/font-face.css';
+l.href = 'https://cdn.rawgit.com/guprooon/Javascript/master/font-face.css';
 var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
 };
 var raf = requestAnimationFrame || mozRequestAnimationFrame ||
