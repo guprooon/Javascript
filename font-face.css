@@ -7,34 +7,28 @@
 	font-weight: normal;
 	font-style: normal;}
 @font-face {
-    font-family: &#39;Roboto Condensed&#39;;
-    src: url(&#39;https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/Italic/fonts/RobotoCondensedItalic.woff2&#39;) format(&#39;woff2&#39;),
-         url(&#39;https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/Italic/fonts/RobotoCondensedItalic.woff&#39;) format(&#39;woff&#39;),
-         url(&#39;https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/Italic/fonts/RobotoCondensedItalic.ttf&#39;) format(&#39;truetype&#39;);
+    font-family: 'Roboto Condensed';
+    src: url('https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/Italic/fonts/RobotoCondensedItalic.woff2') format('woff2'),
+         url('https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/Italic/fonts/RobotoCondensedItalic.woff') format('woff'),
+         url('https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/Italic/fonts/RobotoCondensedItalic.ttf') format('truetype');
 	font-weight: normal;
 	font-style: italic;
 }
 
 @font-face {
-    font-family: &#39;Roboto Condensed&#39;;
-    src: url(&#39;https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/Bold/fonts/RobotoCondensedBold.woff2&#39;) format(&#39;woff2&#39;),
-         url(&#39;https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/Bold/fonts/RobotoCondensedBold.woff&#39;) format(&#39;woff&#39;),
-         url(&#39;https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/Bold/fonts/RobotoCondensedBold.ttf&#39;) format(&#39;truetype&#39;);
+    font-family: 'Roboto Condensed';
+    src: url('https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/Bold/fonts/RobotoCondensedBold.woff2') format('woff2'),
+         url('https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/Bold/fonts/RobotoCondensedBold.woff') format('woff'),
+         url('https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/Bold/fonts/RobotoCondensedBold.ttf') format('truetype');
 	font-weight: bold;
 	font-style: normal;
 }
 
 @font-face {
-    font-family: &#39;Roboto Condensed&#39;;
-    src: url(&#39;https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/BoldItalic/fonts/RobotoCondensedBoldItalic.woff2&#39;) format(&#39;woff2&#39;),
-         url(&#39;https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/BoldItalic/fonts/RobotoCondensedBoldItalic.woff&#39;) format(&#39;woff&#39;),
-         url(&#39;https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/BoldItalic/fonts/RobotoCondensedBoldItalic.ttf&#39;) format(&#39;truetype&#39;);
+    font-family: 'Roboto Condensed';
+    src: url('https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/BoldItalic/fonts/RobotoCondensedBoldItalic.woff2') format('woff2'),
+         url('https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/BoldItalic/fonts/RobotoCondensedBoldItalic.woff') format('woff'),
+         url('https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/BoldItalic/fonts/RobotoCondensedBoldItalic.ttf') format('truetype');
 	font-weight: bold;
 	font-style: italic;
-}
-@font-face {
-    font-family: &quot;Material Design Icons&quot;;
-    src: url(&quot;https://cdn.rawgit.com/guprooon/webicons/master/fonts/materialdesignicons-webfont.woff2&quot;) format(&quot;woff2&quot;), url(&quot;https://cdn.rawgit.com/guprooon/webicons/master/fonts/materialdesignicons-webfont.woff&quot;) format(&quot;woff&quot;), url(&quot;https://cdn.rawgit.com/guprooon/webicons/master/fonts/materialdesignicons-webfont.ttf&quot;) format(&quot;truetype&quot;);
-    font-weight: normal;
-    font-style: normal
 }
