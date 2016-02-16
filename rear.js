@@ -50,17 +50,10 @@ var randomRelatedIndex, showRelatedPost;
                             a = m[A].link[p].href;
                             break
                         }
-                    c += '<li class="related-li"><a title="' + n + '" href="' + a + '"><img alt="' + r + '" class="related-post-item-thumbnail" src="" data-src="' + i + '" width="' + l.thumbnailSize + '" height="' + l.thumbnailSize + '"/></a><div id="content"><h4 class="related-post-item-title"><a title="' + n + '" href="' + a + '">' + r + '</a></h4><p class="related-post-item-summary">' + s + '</p></div><div class="related-post-item-more"><a href="' + a + '">' + l.moreText + "</a></div></li>"
+                    c += '<li class="related-li"><a title="' + n + '" href="' + a + '"><img alt="' + r + '" class="related-post-item-thumbnail" src="' + i + '" width="' + l.thumbnailSize + '" height="' + l.thumbnailSize + '"/></a><div id="content"><h4 class="related-post-item-title"><a title="' + n + '" href="' + a + '">' + r + '</a></h4><p class="related-post-item-summary">' + s + '</p></div><div class="related-post-item-more"><a href="' + a + '">' + l.moreText + "</a></div></li>"
                 }
                 d.innerHTML = c += "</ul>" + u, l.callBack(e)
             }
         };
-function deferThumb() {
-var thumbDefer = document.getElementsByTagName('img');
-for (var i=0; i<thumbDefer.length; i++) {
-if(thumbDefer[i].getAttribute('data-src')) {
-thumbDefer[i].setAttribute('src',thumbDefer[i].getAttribute('data-src'));
-} } }
-window.onload = deferThumb;
     randomRelatedIndex = d, showRelatedPost = m, r(l.homePage + "/feeds/posts/summary?alt=json-in-script&orderby=updated&max-results=0&callback=randomRelatedIndex")
 }(window, document, document.getElementsByTagName("head")[0]);
