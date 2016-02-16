@@ -55,5 +55,12 @@ var randomRelatedIndex, showRelatedPost;
                 d.innerHTML = c += "</ul>" + u, l.callBack(e)
             }
         };
+function deferThumb() {
+var thumbDefer = document.getElementsByTagName('img');
+for (var i=0; i<thumbDefer.length; i++) {
+if(thumbDefer[i].getAttribute('data-src')) {
+thumbDefer[i].setAttribute('src',thumbDefer[i].getAttribute('data-src'));
+} } }
+window.onload = deferThumb;
     randomRelatedIndex = d, showRelatedPost = m, r(l.homePage + "/feeds/posts/summary?alt=json-in-script&orderby=updated&max-results=0&callback=randomRelatedIndex")
 }(window, document, document.getElementsByTagName("head")[0]);
