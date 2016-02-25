@@ -50,7 +50,7 @@ var randomRelatedIndex, showRelatedPost;
                             a = m[A].link[p].href;
                             break
                         }
-                    c += '<li class="related-li"><a title="' + n + '" href="' + a + '"><img alt="' + r + '" class="related-post-item-thumbnail" src="' + i + '" width="' + l.thumbnailSize + '" height="' + l.thumbnailSize + '"/></a><div id="content"><h4 class="related-post-item-title"><a title="' + n + '" href="' + a + '">' + r + '</a></h4><p class="related-post-item-summary">' + s + '</p></div><div class="related-post-item-more"><a href="' + a + '">' + l.moreText + "</a></div></li>"
+                    c += '<li class="related-li"><a title="' + n + '" href="' + a + '"><img alt="' + r + '" class="related-post-item-thumbnail" src="' + i + '" width="' + l.thumbnailSize + '" height="' + l.thumbnailSize + '"/></a><div id="content"><h4 class="related-post-item-title"><a title="' + n + '" href="' + a + '">' + r + '</a></h4><p class="related-post-item-summary">' + s + '</p></div><div class="related-post-item-more"><a href="' + a + '">' + l.moreText + "</a></div><div class='clear'/></li>"
                 }
                 d.innerHTML = c += "</ul>" + u, l.callBack(e)
             }
