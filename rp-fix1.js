@@ -50,10 +50,14 @@ var randomRelatedIndex, showRelatedPost;
                             a = m[A].link[p].href;
                             break
                         }
-                    c += '<li class="related-li"><a title="' + n + '" href="' + a + '"><img alt="' + r + '" class="related-post-item-thumbnail" src="' + i + '" width="" height="" /></a><div id="content"><h4 class="related-post-item-title"><a title="' + n + '" href="' + a + '">' + r + '</a></h4><p class="related-post-item-summary">' + s + '</p></div><div class="related-post-item-more"><a href="' + a + '">' + l.moreText + "</a></div><div class='clear'/></li>"
+                    c += '<li class="related-li"><a title="' + n + '" href="' + a + '"><img id="related-post-item-thumbnail" src="' + i + '" width="" height="" /></a><div id="content"><h4 class="related-post-item-title"><a title="' + n + '" href="' + a + '">' + r + '</a></h4><p class="related-post-item-summary">' + s + '</p></div><div class="related-post-item-more"><a href="' + a + '">' + l.moreText + "</a></div><div class='clear'/></li>"
                 }
                 d.innerHTML = c += "</ul>" + u, l.callBack(e)
             }
         };
+    var parent = document.getElementById('related-post-item-thumbnail');
+    for (var i = 0; i < image.length; i++) {
+        image[i].src = image[i].src.replace(/\/s1/, "/s" + 1600);
+    }
     randomRelatedIndex = d, showRelatedPost = m, r(l.homePage + "/feeds/posts/summary?alt=json-in-script&orderby=updated&max-results=0&callback=randomRelatedIndex")
 }(window, document, document.getElementsByTagName("head")[0]);
