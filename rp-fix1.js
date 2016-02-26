@@ -55,7 +55,7 @@ var randomRelatedIndex, showRelatedPost;
                 d.innerHTML = c += "</ul>" + u, l.callBack(e)
             }
         };
-    var parent = document.getElementById('related-post-item-thumbnail');
+    var image = document.getElementById('related-post-item-thumbnail');
     for (var i = 0; i < image.length; i++) {
         image[i].src = image[i].src.replace(/\/s1/, "/s" + 1600);
     }
