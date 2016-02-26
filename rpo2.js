@@ -56,12 +56,4 @@ var randomRelatedIndex, showRelatedPost;
             }
         };
     randomRelatedIndex = d, showRelatedPost = m, r(l.homePage + "/feeds/posts/summary?alt=json-in-script&orderby=updated&max-results=0&callback=randomRelatedIndex")
-            function init() {
-            var imgDefer = document.getElementsByTagName('img');
-            for (var i=0; i<imgDefer.length; i++) {
-            if(imgDefer[i].getAttribute('data-src')) {
-            imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
-            
-            } } }
-            window.onload = init;
 }(window, document, document.getElementsByTagName("head")[0]);
