@@ -44,13 +44,13 @@ var randomRelatedIndex, showRelatedPost;
                 u = (l.newTabLink ? ' target="_blank"' : "", '<span style="display:block;clear:both;"></span>');
             if (d) {
                 for (var g = m.length, A = 0; A < l.numPosts && A !== g; A++) {
-                    n = m[A].title.$t, r = "auto" !== l.titleLength && l.titleLength < n.length ? n.substring(0, l.titleLength) + "&hellip;" : n, i = "media$thumbnail" in m[A] && l.thumbnailSize !== !1 ? m[A].media$thumbnail.url.replace(/\/s\d+(\-c)?\//, "/s1600/") : l.noImage, s = "summary" in m[A] && l.summaryLength > 0 ? m[A].summary.$t.replace(/<br *\/?>/gi, " ").replace(/<.*?>/g, "").replace(/[<>]/g, "").substring(0, l.summaryLength) + "&hellip;" : "";
+                    n = m[A].title.$t, r = "auto" !== l.titleLength && l.titleLength < n.length ? n.substring(0, l.titleLength) + "&hellip;" : n, i = "media$thumbnail" in m[A] && l.thumbnailSize !== !1 ? m[A].media$thumbnail.url.replace(/\/s\d+(\-c)?\//, "/s1/") : l.noImage, s = "summary" in m[A] && l.summaryLength > 0 ? m[A].summary.$t.replace(/<br *\/?>/gi, " ").replace(/<.*?>/g, "").replace(/[<>]/g, "").substring(0, l.summaryLength) + "&hellip;" : "";
                     for (var p = 0, f = m[A].link.length; f > p; p++)
                         if ("alternate" == m[A].link[p].rel) {
                             a = m[A].link[p].href;
                             break
                         }
-                    c += '<li class="related-li"><a title="' + n + '" href="' + a + '"><img alt="' + r + '" class="related-post-item-thumbnail" src="" data-src="' + i + '" width="" height="" /></a><div id="content"><h4 class="related-post-item-title"><a title="' + n + '" href="' + a + '">' + r + '</a></h4><p class="related-post-item-summary">' + s + '</p></div><div class="related-post-item-more"><a href="' + a + '">' + l.moreText + "</a></div><div class='clear'/></li>"
+                    c += '<li class="related-li"><a title="' + n + '" href="' + a + '"><img alt="' + r + '" class="related-post-item-thumbnail" src="' + i + '" width="" height="" /></a><div id="content"><h4 class="related-post-item-title"><a title="' + n + '" href="' + a + '">' + r + '</a></h4><p class="related-post-item-summary">' + s + '</p></div><div class="related-post-item-more"><a href="' + a + '">' + l.moreText + "</a></div><div class='clear'/></li>"
                 }
                 d.innerHTML = c += "</ul>" + u, l.callBack(e)
             }
