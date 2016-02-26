@@ -44,7 +44,7 @@ var randomRelatedIndex, showRelatedPost;
                 u = (l.newTabLink ? ' target="_blank"' : "", '<span style="display:block;clear:both;"></span>');
             if (d) {
                 for (var g = m.length, A = 0; A < l.numPosts && A !== g; A++) {
-                    n = m[A].title.$t, r = "auto" !== l.titleLength && l.titleLength < n.length ? n.substring(0, l.titleLength) + "&hellip;" : n, i = "media$thumbnail" in m[A] && l.thumbnailSize !== !1 ? m[A].media$thumbnail.url.replace(/\/s\d+(\-c)?\//, "/s1/") : l.noImage, s = "summary" in m[A] && l.summaryLength > 0 ? m[A].summary.$t.replace(/<br *\/?>/gi, " ").replace(/<.*?>/g, "").replace(/[<>]/g, "").substring(0, l.summaryLength) + "&hellip;" : "";
+                    n = m[A].title.$t, r = "auto" !== l.titleLength && l.titleLength < n.length ? n.substring(0, l.titleLength) + "&hellip;" : n, i = "media$thumbnail" in m[A] && l.thumbnailSize !== !1 ? m[A].media$thumbnail.url.replace(/\/s\d+(\-c)?\//, "/s200/") : l.noImage, s = "summary" in m[A] && l.summaryLength > 0 ? m[A].summary.$t.replace(/<br *\/?>/gi, " ").replace(/<.*?>/g, "").replace(/[<>]/g, "").substring(0, l.summaryLength) + "&hellip;" : "";
                     for (var p = 0, f = m[A].link.length; f > p; p++)
                         if ("alternate" == m[A].link[p].rel) {
                             a = m[A].link[p].href;
@@ -55,9 +55,5 @@ var randomRelatedIndex, showRelatedPost;
                 d.innerHTML = c += "</ul>" + u, l.callBack(e)
             }
         };
-    var image = document.getElementById('related-post-item-thumbnail');
-    for (var i = 0; i < image.length; i++) {
-        image[i].src = image[i].src.replace(/\/s1/, "/s" + 1600);
-    }
     randomRelatedIndex = d, showRelatedPost = m, r(l.homePage + "/feeds/posts/summary?alt=json-in-script&orderby=updated&max-results=0&callback=randomRelatedIndex")
 }(window, document, document.getElementsByTagName("head")[0]);
