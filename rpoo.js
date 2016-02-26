@@ -7,7 +7,7 @@ var randomRelatedIndex, showRelatedPost;
         numPosts: 7,
         summaryLength: 370,
         titleLength: "auto",
-        thumbnailSize: 72,
+        thumbnailSize: 1600,
         noImage: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAA3NCSVQICAjb4U/gAAAADElEQVQImWOor68HAAL+AX7vOF2TAAAAAElFTkSuQmCC",
         containerId: "related-post",
         newTabLink: !1,
@@ -44,7 +44,7 @@ var randomRelatedIndex, showRelatedPost;
                 u = (l.newTabLink ? ' target="_blank"' : "", '<span style="display:block;clear:both;"></span>');
             if (d) {
                 for (var g = m.length, A = 0; A < l.numPosts && A !== g; A++) {
-                    n = m[A].title.$t, r = "auto" !== l.titleLength && l.titleLength < n.length ? n.substring(0, l.titleLength) + "&hellip;" : n, i = "media$thumbnail" in m[A] && l.thumbnailSize !== !1 ? m[A].media$thumbnail.url.replace(/\/s\d\//, "/s1600/") : l.noImage, s = "summary" in m[A] && l.summaryLength > 0 ? m[A].summary.$t.replace(/<br *\/?>/gi, " ").replace(/<.*?>/g, "").replace(/[<>]/g, "").substring(0, l.summaryLength) + "&hellip;" : "";
+                    n = m[A].title.$t, r = "auto" !== l.titleLength && l.titleLength < n.length ? n.substring(0, l.titleLength) + "&hellip;" : n, i = "media$thumbnail" in m[A] && l.thumbnailSize !== !1 ? m[A].media$thumbnail.url.replace(/\/s\d+(\-c)?\//, "/s1600/") : l.noImage, s = "summary" in m[A] && l.summaryLength > 0 ? m[A].summary.$t.replace(/<br *\/?>/gi, " ").replace(/<.*?>/g, "").replace(/[<>]/g, "").substring(0, l.summaryLength) + "&hellip;" : "";
                     for (var p = 0, f = m[A].link.length; f > p; p++)
                         if ("alternate" == m[A].link[p].rel) {
                             a = m[A].link[p].href;
