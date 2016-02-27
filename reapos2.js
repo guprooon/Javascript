@@ -34,7 +34,7 @@ var randomRelatedIndex, showRelatedPost;
         d = function(e) {
             var t = e.feed.openSearch$totalResults.$t - l.numPosts,
                 a = i(1, t > 0 ? t : 1);
-            r(l.homePage + "/feeds/posts/summary" + s + "?alt=json-in-script&orderby=updated&start-index=" + a + "&max-results=" + l.numPosts + "&callback=showRelatedPost")
+            r(l.homePage + "/feeds/posts/summary" + s + "?alt=json-in-script&orderby=published&start-index=" + a + "&max-results=" + l.numPosts + "&callback=showRelatedPost")
         },
         m = function(e) {
             var a, n, r, i, s, d = t.getElementById(l.containerId),
@@ -55,5 +55,5 @@ var randomRelatedIndex, showRelatedPost;
                 d.innerHTML = c += "</ul>" + u, l.callBack(e)
             }
         };
-    randomRelatedIndex = d, showRelatedPost = m, r(l.homePage + "/feeds/posts/summary?alt=json-in-script&orderby=updated&max-results=0&callback=randomRelatedIndex")
+    randomRelatedIndex = d, showRelatedPost = m, r(l.homePage + "/feeds/posts/summary?alt=json-in-script&orderby=published&max-results=0&callback=randomRelatedIndex")
 }(window, document, document.getElementsByTagName("head")[0]);
