@@ -1,0 +1,39 @@
+
+ @font-face {
+	font-family: 'Roboto Condensed';
+	src: url('https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/Regular/fonts/RobotoCondensedRegular.woff2') format('woff2'),
+		 url('https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/Regular/fonts/RobotoCondensedRegular.woff') format('woff'),
+		 url('https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/Regular/fonts/RobotoCondensedRegular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;}
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/Italic/fonts/RobotoCondensedItalic.woff2') format('woff2'),
+         url('https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/Italic/fonts/RobotoCondensedItalic.woff') format('woff'),
+         url('https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/Italic/fonts/RobotoCondensedItalic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/Bold/fonts/RobotoCondensedBold.woff2') format('woff2'),
+         url('https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/Bold/fonts/RobotoCondensedBold.woff') format('woff'),
+         url('https://cdn.rawgit.com/guprooon/Webfonts/master/RobotoCondensed/Bold/fonts/RobotoCondensedBold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Envy Code';
+    src: url('https://cdn.rawgit.com/guprooon/Webfonts/master/EnvyCR/envy_code_r-webfont.woff2') format('woff2'),
+         url('https://cdn.rawgit.com/guprooon/Webfonts/master/EnvyCR/envy_code_r-webfont.woff') format('woff'),
+         url('https://cdn.rawgit.com/guprooon/Webfonts/master/EnvyCR/envy_code_r-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Material Design Icons';
+    src: url('https://cdn.rawgit.com/guprooon/webicons/master/fonts/materialdesignicons-webfont.woff2') format('woff2'), url('https://cdn.rawgit.com/guprooon/webicons/master/fonts/materialdesignicons-webfont.woff') format('woff'), url('https://cdn.rawgit.com/guprooon/webicons/master/fonts/materialdesignicons-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal
+}
