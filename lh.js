@@ -76,6 +76,15 @@ function listEntries(q) {
         c.onLoadComplete()
     }
     c.current++
+          $(document).ready(function(){
+            $('#list-articles .list-entries li').each(function(){
+              if ($(this).find('.komentar a:contains(Footer)').length){
+                $(this).addClass('footer');
+              }
+              else if ($(this).find('.komentar a:contains(Wordpress)').length){
+                $(this).addClass('wordpress');
+              }
+            });
 }
 mf_defaults.loadFeed(0);
 
