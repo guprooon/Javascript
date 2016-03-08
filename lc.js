@@ -51,12 +51,7 @@ function listEntries(q) {
         for (var e = 0, b = p[f].link.length; e < b; e++) {
             k = (p[f].link[e].rel == "alternate") ? p[f].link[e].href : "#"
         }
-        for (var j = 0; j < p[f].link.length; j++) {
-            if (p[f].link[j].rel == "replies" && p[f].link[j].type == "text/html") {
-                q = p[f].link[j].title.split(" ")[0];
-                break;
-            }
-        }
+        q = p[f].category[];
         d += '<li>';
         d += '<div class="konten"><div class="judul"><a href="' + k + '"' + (c.newTabLink ? ' target="_blank"' : "") + ">" + n + "</a></div>";
         d += '<div class="deskripsi">';
@@ -64,7 +59,7 @@ function listEntries(q) {
         d += (c.showSummary) ? m : "";
         d += "</span></div>";
         d += '<div class="tanggal"><span>' + o + '</span></div>';
-        d += '<div class="komentar"><span>' + q + ' ' + 'Komentar</span></div></div>';
+        d += '<div class="komentar"><span>' + q + '</span></div></div>';
         d += '<span style="display:block;clear:both;"></span></li>'
     }
     d += "</ul>";
