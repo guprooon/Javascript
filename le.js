@@ -39,7 +39,7 @@ function listEntries(q) {
         a = document.createElement("div"),
         d = "<ul>",
         l = c.feedsUri.length,
-        n, k, m, o, r;
+        n, k, m, o, r, z;
     for (var f = 0; f < c.numPost; f++) {
         if (f == p.length) {
             break
@@ -51,8 +51,8 @@ function listEntries(q) {
         for (var e = 0, b = p[f].link.length; e < b; e++) {
             k = (p[f].link[e].rel == "alternate") ? p[f].link[e].href : "#"
         }
-        for (var y = 0, y < p[f].category.length; y++) {
-            q = p[f].category[y].term;
+        for (var y = 0; y < p[f].category.length; y++) {
+            z = p[f].category[y].term;
         }
         d += '<li>';
         d += '<div class="konten"><div class="judul"><a href="' + k + '"' + (c.newTabLink ? ' target="_blank"' : "") + ">" + n + "</a></div>";
@@ -61,7 +61,7 @@ function listEntries(q) {
         d += (c.showSummary) ? m : "";
         d += "</span></div>";
         d += '<div class="tanggal"><span>' + o + '</span></div>';
-        d += '<div class="komentar"><span>' + q + '</span></div></div>';
+        d += '<div class="komentar"><span>' + z + '</span></div></div>';
         d += '<span style="display:block;clear:both;"></span></li>'
     }
     d += "</ul>";
