@@ -61,7 +61,7 @@ function listEntries(q) {
         d += (c.showSummary) ? m : "";
         d += "</span></div>";
         d += '<div class="tanggal"><span>' + o + '</span></div>';
-        d += '<div class="komentar"><a href="'this.feedsUri[c].url + '/search/label/' + z + '?&max-results=20">' + z + '</a></div></div>';
+        d += '<div class="komentar"><a href="http://pintasanoke.blogspot.com/search/label/' + z + '?&max-results=20">' + z + '</a></div></div>';
         d += '<span style="display:block;clear:both;"></span></li>'
     }
     d += "</ul>";
