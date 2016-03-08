@@ -1,23 +1,13 @@
 var mf_defaults = {
     feedsUri: [{
-        name: "Posting JQuery",
-        url: "http://www.dte.web.id",
-        tag: "JQuery"
-    }, {
-        name: "Posting CSS",
-        url: "http://www.dte.web.id",
-        tag: "CSS"
-    }, {
-        name: "Widget-Widget Blogger",
-        url: "http://www.dte.web.id",
-        tag: "Widget"
+        name: "Artikel",
+        url: "http://pintasanoke.blogspot.com",
+        tag: "Artikel"
     }],
-    numPost: 4,
-    showThumbnail: true,
+    numPost: 20,
     showSummary: true,
     summaryLength: 80,
     titleLength: "auto",
-    thumbSize: 75,
     newTabLink: false,
     containerId: "feed-list-container",
     listClass: "list-entries",
@@ -49,7 +39,7 @@ function listEntries(q) {
         a = document.createElement("div"),
         d = "<ul>",
         l = c.feedsUri.length,
-        n, k, m, g, o, r;
+        n, k, m, o, r;
     for (var f = 0; f < c.numPost; f++) {
         if (f == p.length) {
             break
@@ -58,7 +48,6 @@ function listEntries(q) {
         m = ("summary" in p[f]) ? p[f].summary.$t.replace(/<br ?\/?>/g, " ").replace(/<.*?>/g, "").replace(/[<>]/g, "") : "";
         m = (c.summaryLength < m.length) ? m.substring(0, c.summaryLength) + "&hellip;" : m;
         o = p[f].published.$t.substring(0, 10).replace(/-/g, "/");
-        g = ("media$thumbnail" in p[f]) ? '<img src="' + p[f].media$thumbnail.url.replace(/\/s72(\-c)?\//, "/s" + c.thumbSize + "-c/") + '" style="width:' + c.thumbSize + "px;height:" + c.thumbSize + 'px;">' : '<span class="fake-img" style="width:' + c.thumbSize + "px;height:" + c.thumbSize + 'px;"></span>';
         for (var e = 0, b = p[f].link.length; e < b; e++) {
             k = (p[f].link[e].rel == "alternate") ? p[f].link[e].href : "#"
         }
@@ -68,9 +57,8 @@ function listEntries(q) {
                 break;
             }
         }
-        d += '<li><div class="inner"><div class="thumb">';
-        d += (c.showThumbnail) ? g : "";
-        d += '</div><div class="content"><div class="title"><a href="' + k + '"' + (c.newTabLink ? ' target="_blank"' : "") + ">" + n + "</a></div>";
+        d += '<li><div class="inner">';
+        d += '<div class="content"><div class="title"><a href="' + k + '"' + (c.newTabLink ? ' target="_blank"' : "") + ">" + n + "</a></div>";
         d += '<div class="summary">';
         d += "<span" + (!c.showSummary ? ' style="display:none;"' : "") + ">";
         d += (c.showSummary) ? m : "";
@@ -80,9 +68,8 @@ function listEntries(q) {
         d += '<span style="display:block;clear:both;"></span></div></li>'
     }
     d += "</ul>";
-    r += '<div class="more-link"><a href="' + c.feedsUri[c.current].url.replace(/\/$/, "") + "/search/label/" + c.feedsUri[c.current].tag + c.readMore.endParam + '"' + (c.newTabLink ? ' target="_blank"' : "") + ">" + c.readMore.text + "</a></div>";
     a.className = c.listClass;
-    a.innerHTML = '<div class="main-title"><span>' + c.feedsUri[c.current].name + '</span>' + r + "</div>" + d;
+    a.innerHTML = d;
     h.appendChild(a);
     c.onLoadFeed(c.current);
     if ((c.current + 1) < l) {
