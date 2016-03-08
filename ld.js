@@ -51,7 +51,9 @@ function listEntries(q) {
         for (var e = 0, b = p[f].link.length; e < b; e++) {
             k = (p[f].link[e].rel == "alternate") ? p[f].link[e].href : "#"
         }
-        q = p[f].category[];
+        for (var y = 0, y < p[f].category.length; y++) {
+            q = p[f].category[y].term;
+        }
         d += '<li>';
         d += '<div class="konten"><div class="judul"><a href="' + k + '"' + (c.newTabLink ? ' target="_blank"' : "") + ">" + n + "</a></div>";
         d += '<div class="deskripsi">';
