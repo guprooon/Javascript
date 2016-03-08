@@ -9,7 +9,7 @@ var mf_defaults = {
     summaryLength: 80,
     titleLength: "auto",
     newTabLink: false,
-    containerId: "feed-list-container",
+    containerId: "list-articles",
     listClass: "list-entries",
     readMore: {
         text: "More",
@@ -57,15 +57,15 @@ function listEntries(q) {
                 break;
             }
         }
-        d += '<li><div class="inner">';
-        d += '<div class="content"><div class="title"><a href="' + k + '"' + (c.newTabLink ? ' target="_blank"' : "") + ">" + n + "</a></div>";
-        d += '<div class="summary">';
+        d += '<li>';
+        d += '<div class="konten"><div class="judul"><a href="' + k + '"' + (c.newTabLink ? ' target="_blank"' : "") + ">" + n + "</a></div>";
+        d += '<div class="deskripsi">';
         d += "<span" + (!c.showSummary ? ' style="display:none;"' : "") + ">";
         d += (c.showSummary) ? m : "";
         d += "</span></div>";
-        d += '<div class="date"><span>' + o + '</span></div>';
-        d += '<div class="cm"><span>' + q + ' ' + 'Komentar</span></div></div>';
-        d += '<span style="display:block;clear:both;"></span></div></li>'
+        d += '<div class="tanggal"><span>' + o + '</span></div>';
+        d += '<div class="komentar"><span>' + q + ' ' + 'Komentar</span></div></div>';
+        d += '<span style="display:block;clear:both;"></span></li>'
     }
     d += "</ul>";
     a.className = c.listClass;
