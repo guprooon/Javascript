@@ -337,35 +337,6 @@ function dropdownmenu() {
   });
 }
 
-function script() {
-  leftmenu();
-  labelmenu();
-  dropdownmenu();
-
-  $(window).resize(function() {
-    if($(window).width() > 1100) {
-      if($('body').hasClass('resized')) {
-        return
-      } else {
-        leftmenu();
-        $('body').addClass('resized');
-      }
-    }
-  });
-
-  $("#blog-navigation").scrollBox();
-
-  $("#blog-navigation").mouseover(function() {
-    if($(this).find('.sb-scrollbar').height() == $(this).find('.sb-scrollbar-container').height()) {
-      return
-    } else {
-      $(this).find('.sb-scrollbar').addClass('show');
-    }
-  }).mouseleave(function() {
-    $(this).find('.sb-scrollbar').removeClass('show');
-  });
-}
-
 function mmconfig(label) {
   var megamenu = $('.mega-menu-label'),
     first = $('.mm1-config'),
